@@ -22,7 +22,7 @@ function pageLoad() {
   // passenger3DropoffAddressLine1, passenger3DropoffAddressLine2
   console.log(ride)
   
-  if (ride[0].numberOfPassengers == 1 || ride.length > 1) {
+  if (ride[0].numberOfPassengers == 1 && ride.length > 1) {
     levelOfService = 'Noober Pool'
   } else if (ride[0].purpleRequested == true) {
     levelOfService = 'Noober Purple'
@@ -32,36 +32,45 @@ function pageLoad() {
     levelOfService = 'Noober X'
   }
   console.log(levelOfService)
+  
+  let passenger1 = ride[0]
+  let passenger2 = ride[1]
+  let passenger3 = ride[2]
 
-  passenger1Name = `${ride[0].passengerDetails.first} ${ride[0].passengerDetails.last}`
-  passenger1Phone = ride[0].passengerDetails.phoneNumber
-  passenger1NumberOfPassengers = ride[0].numberOfPassengers
-  passenger1PickupAddressLine1 = ride[0].pickupLocation.address
-  passenger1PickupAddressLine2 = `${ride[0].pickupLocation.city} ${ride[0].pickupLocation.state} ${ride[0].pickupLocation.zip}`
-  passenger1DropoffAddressLine1 = ride[0].dropoffLocation.address
-  passenger1DropoffAddressLine2 = `${ride[0].dropoffLocation.city} ${ride[0].dropoffLocation.state} ${ride[0].dropoffLocation.zip}`
+  passenger1Name = `${passenger1.passengerDetails.first} ${passenger1.passengerDetails.last}`
+  passenger1Phone = passenger1.passengerDetails.phoneNumber
+  passenger1NumberOfPassengers = passenger1.numberOfPassengers
+  passenger1PickupAddressLine1 = passenger1.pickupLocation.address
+  passenger1PickupAddressLine2 = `${passenger1.pickupLocation.city} ${passenger1.pickupLocation.state} ${passenger1.pickupLocation.zip}`
+  passenger1DropoffAddressLine1 = passenger1.dropoffLocation.address
+  passenger1DropoffAddressLine2 = `${passenger1.dropoffLocation.city} ${passenger1.dropoffLocation.state} ${passenger1.dropoffLocation.zip}`
 
-  let passenger-2-x
-  if (levelOfService == 'Noober Pool' && ride.length < 3) {
-    passenger-2-x = ride[1]
-  } else {}
-  console.log(passenger-2-x)
-//   if (ride.length > 1) {
-//   passenger2Name = `${passenger-2.passengerDetails.first} ${passenger-2.passengerDetails.last}`
-//   passenger2Phone = passenger-2.passengerDetails.phoneNumber
-//   passenger2NumberOfPassengers = passenger-2.numberOfPassengers
-//   passenger2PickupAddressLine1 = passenger-2.pickupLocation.address
-//   passenger2PickupAddressLine2 = `${passenger-2.pickupLocation.city} ${passenger-2.pickupLocation.state} ${passenger-2.pickupLocation.zip}`
-//   passenger2DropoffAddressLine1 = passenger-2.dropoffLocation.address
-//   passenger2DropoffAddressLine2 = `${passenger-2.dropoffLocation.city} ${passenger-2.dropoffLocation.state} ${passenger-2.dropoffLocation.zip}`
-// } else {}
+  if (levelOfService == 'Noober Pool' && ride.length == 2) {
+  passenger2Name = `${passenger2.passengerDetails.first} ${passenger2.passengerDetails.last}`
+  passenger2Phone = passenger2.passengerDetails.phoneNumber
+  passenger2NumberOfPassengers = passenger2.numberOfPassengers
+  passenger2PickupAddressLine1 = passenger2.pickupLocation.address
+  passenger2PickupAddressLine2 = `${passenger2.pickupLocation.city} ${passenger2.pickupLocation.state} ${passenger2.pickupLocation.zip}`
+  passenger2DropoffAddressLine1 = passenger2.dropoffLocation.address
+  passenger2DropoffAddressLine2 = `${passenger2.dropoffLocation.city} ${passenger2.dropoffLocation.state} ${passenger2.dropoffLocation.zip}`
+} else if (levelOfService == 'Noober Pool' && ride.length == 3) {
+  passenger2Name = `${passenger2.passengerDetails.first} ${passenger2.passengerDetails.last}`
+  passenger2Phone = passenger2.passengerDetails.phoneNumber
+  passenger2NumberOfPassengers = passenger2.numberOfPassengers
+  passenger2PickupAddressLine1 = passenger2.pickupLocation.address
+  passenger2PickupAddressLine2 = `${passenger2.pickupLocation.city} ${passenger2.pickupLocation.state} ${passenger2.pickupLocation.zip}`
+  passenger2DropoffAddressLine1 = passenger2.dropoffLocation.address
+  passenger2DropoffAddressLine2 = `${passenger2.dropoffLocation.city} ${passenger2.dropoffLocation.state} ${passenger2.dropoffLocation.zip}`
+  // Passenger 3 info
+  passenger3Name = `${passenger3.passengerDetails.first} ${passenger3.passengerDetails.last}`
+  passenger3Phone = passenger3.passengerDetails.phoneNumber
+  passenger3NumberOfPassengers = passenger3.numberOfPassengers
+  passenger3PickupAddressLine1 = passenger3.pickupLocation.address
+  passenger3PickupAddressLine2 = `${passenger3.pickupLocation.city} ${passenger3.pickupLocation.state} ${passenger3.pickupLocation.zip}`
+  passenger3DropoffAddressLine1 = passenger3.dropoffLocation.address
+  passenger3DropoffAddressLine2 = `${passenger3.dropoffLocation.city} ${passenger3.dropoffLocation.state} ${passenger3.dropoffLocation.zip}`
+} else {}
 
-//   passenger3Name = `${ride[2].passengerDetails.first} ${ride[2].passengerDetails.last}`
-//   passenger3Phone = ride[2].passengerDetails.phoneNumber
-//   passenger3NumberOfPassengers = ride[2].numberOfPassengers
-//   passenger3PickupAddressLine1 = ride[2].pickupLocation.address
-//   passenger3PickupAddressLine2 = `${ride[2].pickupLocation.city} ${ride[2].pickupLocation.state} ${ride[2].pickupLocation.zip}`
-//   passenger3DropoffAddressLine1 = ride[2].dropoffLocation.address
-//   passenger3DropoffAddressLine2 = `${ride[2].dropoffLocation.city} ${ride[2].dropoffLocation.state} ${ride[2].dropoffLocation.zip}`
+//if (levelOfService == 'Noober Pool' && ride.length == 3)
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
 }
