@@ -69,7 +69,7 @@ function pageLoad() {
   passenger3PickupAddressLine2 = `${passenger3.pickupLocation.city}, ${passenger3.pickupLocation.state} ${passenger3.pickupLocation.zip}`
   passenger3DropoffAddressLine1 = passenger3.dropoffLocation.address
   passenger3DropoffAddressLine2 = `${passenger3.dropoffLocation.city}, ${passenger3.dropoffLocation.state} ${passenger3.dropoffLocation.zip}`
-} else {}
+} 
 
 
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
