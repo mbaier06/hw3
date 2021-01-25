@@ -71,6 +71,6 @@ function pageLoad() {
   passenger3DropoffAddressLine2 = `${passenger3.dropoffLocation.city} ${passenger3.dropoffLocation.state} ${passenger3.dropoffLocation.zip}`
 } else {}
 
-//if (levelOfService == 'Noober Pool' && ride.length == 3)
+
   //  👆 YOUR CODE ENDS HERE. DON'T CHANGE ANY OTHER CODE 👆
 }
